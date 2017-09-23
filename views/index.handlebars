@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 bg-success">
+      <div class="row text-center">
+        <h3>Burgers to Eat</h3>
+      </div>
+      <div class="row">
+        <ul>
+          {{#each burgers_noteaten}}
+            <li>
+              <p>
+                <h4>{{Burger_name}}</h4>
+
+                <form action="/?_method=PUT" method="POST">
+                  <input type="hidden" name="id" value="{{ID}}">
+                  <button type="submit"><img src="http://www.tellusaboutus.com/comments/images/BK-WebComment/BB_WHOPPER-v1.png" style="height:250px;width:250px"></button>
+                </form>
+                <h7>click to eat!</h7>
+              </p>
+            </li>
+          {{/each}}
+        </ul>   
+      </div>
+    </div>
+    <div class="col-xs-6 bg-danger">
+      <div class="row text-center">
+        <h3>You Ate these Burgers</h3>
+      </div>
+      <div class="row">
+      <ul>
+        {{#each burgers_eaten}}
+          <li>
+            <p>
+              <h4>{{Burger_name}}</h4>
+            </p>
+          </li>
+        {{/each}}
+      </ul>  
+      </div>
+    </div>  
+  </div>
+</div>
+
+
+<h2>ADD A BURGER</h2>
+<form method="POST" action="/" class="button-size">
+	<textarea type="text" name="burger"></textarea>
+	<button type="submit">ADD BURGER!</button>
+</form>

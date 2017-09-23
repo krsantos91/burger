@@ -1,0 +1,1 @@
+insert into burgers(Burger_name)values('Double double'),('Bacon cheddar'),('Turkey')
